@@ -1,0 +1,10 @@
+base/utils_package.lua:406: error: scripts/main.lua:61: attempt to perform arithmetic on local 'currentTime' (a function value)
+stack traceback:
+	scripts/main.lua:61: in function 'subscriberInfo'
+	scripts/base/Reactor.lua:427: in function 'onClick'
+	scripts/base/utils_package.lua:554: in function 'implFunc'
+	scripts/base/utils_package.lua:572: in function 'onImplCb'
+	scripts/base/utils_package.lua:586: in function <scripts/base/utils_package.lua:585>
+	[C]: in function 'frame'
+	base/utils_package.lua:406: in function '__app_frame_iter'
+	base/utils_package.lua:425: in function <base/utils_package.lua:239>
