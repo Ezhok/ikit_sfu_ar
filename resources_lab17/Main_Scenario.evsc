@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<chart owner="EV_Studio" version="1.0">
+ <object type="Reactor">
+  <property name="id" type="long">2778199</property>
+  <property name="relative_position" type="realpoint">-228.000000,-49.000000</property>
+  <property name="reactor" type="reactor_info">
+   <reactor>6af158f4-e516-f2b4-7a99</reactor>
+   <typename>camera_manipulator</typename>
+  </property>
+  <object type="Event">
+   <property name="id" type="long">4232716</property>
+   <property name="relative_position" type="realpoint">36.000000,44.000000</property>
+   <property name="event" type="event_info">
+    <reactor>6af158f4-e516-f2b4-7a99</reactor>
+    <event>onHomePosition</event>
+    <arguments/>
+   </property>
+  </object>
+  <object type="Action">
+   <property name="id" type="long">5609546</property>
+   <property name="relative_position" type="realpoint">0.000000,76.000000</property>
+   <property name="action" type="action_info">
+    <reactor>6af158f4-e516-f2b4-7a99</reactor>
+    <action>setHomePosition</action>
+    <arguments>
+     <argument name="eye" type="Vec3">
+      <field name="x" value="0"/>
+      <field name="y" value="0"/>
+      <field name="z" value="0"/>
+     </argument>
+     <argument name="center" type="Vec3">
+      <field name="x" value="0"/>
+      <field name="y" value="0"/>
+      <field name="z" value="0"/>
+     </argument>
+     <argument name="up" type="Vec3">
+      <field name="x" value="0"/>
+      <field name="y" value="0"/>
+      <field name="z" value="0"/>
+     </argument>
+     <argument name="autoComputeHomePosition" type="Bool"/>
+    </arguments>
+   </property>
+  </object>
+  <object type="Action">
+   <property name="id" type="long">3936734</property>
+   <property name="relative_position" type="realpoint">0.000000,108.000000</property>
+   <property name="action" type="action_info">
+    <reactor>6af158f4-e516-f2b4-7a99</reactor>
+    <action>home</action>
+    <arguments/>
+   </property>
+  </object>
+ </object>
+</chart>
