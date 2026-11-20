@@ -1,0 +1,102 @@
+
+print("TELEPORT SCRIPT STARTED")
+
+-- Получаем объекты проекта
+local mouse = reactorController:getReactorByName("Mouse")
+local intersector = reactorController:getReactorByName("Intersector")
+local camera = reactorController:getReactorByName("CameraManipulator")
+
+-- Проверяем, что объекты найдены
+if not mouse or not intersector or not camera then
+    print("ERROR: One or more reactors not found")
+    return
+end
+
+-- Скорость пока оставляем для следующего этапа
+local moveSpeed = 2.0
+
+-- Высота камеры
+local cameraHeight = 1.6
+
+-- Расстояние от объекта
+local distance = 1.5
+
+-- Функция перемещения к объекту
+local function teleportTo(eye, center)
+
+    print("TELEPORT STARTED")
+
+    camera:setHomePosition(
+        eye,
+        center,
+        osg.Vec3(0, 0, 1),
+        false
+    )
+
+    camera:home()
+
+    print("TELEPORT FINISHED")
+end
+
+-- Координаты камеры возле дивана
+intersector:subscribeEvent(
+    "onHit",
+    function()
+        print("SOFA SELECTED")
+
+        teleportTo(
+            osg.Vec3(3, distance, cameraHeight),
+            osg.Vec3(3, 0, cameraHeight)
+        )
+    end,
+    reactorController:getReactorByName("Sofa").id,
+    false
+)
+
+-- Координаты камеры возле стола
+intersector:subscribeEvent(
+    "onHit",
+    function()
+        print("TABLE SELECTED")
+
+        teleportTo(
+            osg.Vec3(5, 3, cameraHeight),
+            osg.Vec3(5, 4.5, cameraHeight)
+        )
+    end,
+    reactorController:getReactorByName("Table").id,
+    false
+)
+
+-- Координаты камеры возле шкафа
+intersector:subscribeEvent(
+    "onHit",
+    function()
+        print("CABINET SELECTED")
+
+        teleportTo(
+            osg.Vec3(7, 3, cameraHeight),
+            osg.Vec3(7, 4.5, cameraHeight)
+        )
+    end,
+    reactorController:getReactorByName("Cabinet").id,
+    false
+)
+
+-- Обработка средней кнопки мыши
+mouse:subscribeEvent(
+    "onButtonPush",
+    function(buttonId)
+
+        if buttonId == MIDDLE_MOUSE_BUTTON then
+            print("MIDDLE BUTTON PRESSED")
+            intersector:findIntersection()
+        end
+
+    end
+)
+
+-- Включаем мышь
+mouse:enable()
+
+print("TELEPORT HANDLER READY")
