@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project version="3.7.2">
+ <presentationParams>
+  <parameter name="enableStatistics" value="true"/>
+  <parameter name="flipFrames">
+   <field name="x" value="false"/>
+   <field name="y" value="false"/>
+  </parameter>
+  <parameter name="clipPlanes">
+   <field name="near" value="0.01"/>
+   <field name="far" value="10"/>
+  </parameter>
+  <parameter name="useMainCamera" value="true"/>
+  <parameter name="clearColor">
+   <field name="x" value="0.7"/>
+   <field name="y" value="0.7"/>
+   <field name="z" value="0.7"/>
+   <field name="w" value="1"/>
+  </parameter>
+ </presentationParams>
+ <resources dir="resources_lab17">
+  <resource internal="false" id="6af15cb0-b29-2fd-ccc-b1f" kind="script" local="false" forceExport="true" rawAssetsExport="false" name="main.lua">
+   <filename value="main.lua"/>
+   <source value="C:\Users\User\Desktop\lab17\main.lua"/>
+  </resource>
+  <resource internal="false" id="6af160b2-481-72f-944-1ea" kind="model" local="false" forceExport="false" rawAssetsExport="false" name="Cortina nova 5_0.fbx">
+   <filename value="Cortina nova 5_0.fbx"/>
+   <source value="C:\Users\User\Desktop\lab17\curtain-cortina-30-new\source\Cortina nova 5_0.fbx"/>
+  </resource>
+  <resource internal="false" id="6af160c2-c47-ddf-2ca-d62" kind="model" local="false" forceExport="false" rawAssetsExport="false" name="SoggiornocompletoFBX.fbx">
+   <filename value="SoggiornocompletoFBX.fbx"/>
+   <source value="C:\Users\User\Desktop\lab17\soggiorno-completo-living-room\source\SoggiornocompletoFBX\SoggiornocompletoFBX.fbx"/>
+  </resource>
+  <resource internal="false" id="6af160d1-d3b-544-8ba-274" kind="model" local="false" forceExport="false" rawAssetsExport="false" name="Fan.fbx">
+   <filename value="Fan.fbx"/>
+   <source value="C:\Users\User\Desktop\lab17\simple-ceiling-fan\source\Simple Ceiling Fan\Simple Ceiling Fan\model\FBX\Fan.fbx"/>
+  </resource>
+  <resource internal="false" id="6af160dc-287-295-512-4cf" kind="model" local="false" forceExport="false" rawAssetsExport="false" name="modern_tv_table.fbx">
+   <filename value="modern_tv_table.fbx"/>
+   <source value="C:\Users\User\Desktop\lab17\a-tv-table-with-drawers-for-storage\source\modern_tv_table\modern_tv_table.fbx"/>
+  </resource>
+ </resources>
+ <reactors>
+  <order>
+   <item id="System"/>
+   <item id="Viewer"/>
+   <item id="6af158f4-e516-f2b4-7a99"/>
+   <item id="Scene"/>
+  </order>
+  <reactor id="Scene" name="Scene" type="node.scene" enabled="true">
+   <parameter name="nodeMask">
+    <field name="mask" value="0x0000001F"/>
+    <field name="unchangedBits" value="0x00000000"/>
+   </parameter>
+   <parameter name="children">
+    <item value="6af15706-1784-2a28-c6ae"/>
+    <item value="6af15372-8114-f73e-d515"/>
+    <item value="6af157fd-1fe7-c74e-46f1"/>
+    <item value="6af15871-5dc7-359c-91e6"/>
+   </parameter>
+   <parameter name="environmentMap"/>
+   <parameter name="displaySkybox" value="false"/>
+   <view expanded="true"/>
+  </reactor>
+  <reactor id="System" name="System" type="system" enabled="true">
+   <parameter name="albumName" value="evi_app"/>
+  </reactor>
+  <reactor id="Viewer" name="Viewer" type="viewer" enabled="true">
+   <parameter name="cameraManipulator" value="6af158f4-e516-f2b4-7a99"/>
+  </reactor>
+  <reactor id="6af15372-8114-f73e-d515" name="Room" type="node.model" enabled="true">
+   <parameter name="nodeMask">
+    <field name="mask" value="0x0000001F"/>
+    <field name="unchangedBits" value="0x00000000"/>
+   </parameter>
+   <parameter name="children"/>
+   <parameter name="trans">
+    <field name="x" value="0"/>
+    <field name="y" value="0"/>
+    <field name="z" value="0"/>
+   </parameter>
+   <parameter name="rotate">
+    <field name="x" value="90"/>
+    <field name="y" value="0"/>
+    <field name="z" value="0"/>
+   </parameter>
+   <parameter name="scale">
+    <field name="x" value="1.1"/>
+    <field name="y" value="1.1"/>
+    <field name="z" value="1.1"/>
+   </parameter>
+   <parameter name="kdTrees" value="auto"/>
+   <parameter name="rig" value="auto"/>
+   <parameter name="morph" value="auto"/>
+   <parameter name="gpuInstancing" value="auto"/>
+   <parameter name="gpuInstancesMinCount" value="50"/>
+   <parameter name="model" value="6af160c2-c47-ddf-2ca-d62"/>
+   <view expanded="true"/>
+  </reactor>
+  <reactor id="6af15706-1784-2a28-c6ae" name="Curtains" type="node.model" enabled="true">
+   <parameter name="nodeMask">
+    <field name="mask" value="0x0000001F"/>
+    <field name="unchangedBits" value="0x00000000"/>
+   </parameter>
+   <parameter name="children"/>
+   <parameter name="trans">
+    <field name="x" value="19504.091753249"/>
+    <field name="y" value="-11736.055352553"/>
+    <field name="z" value="-189.59744594188"/>
+   </parameter>
+   <parameter name="rotate">
+    <field name="x" value="-3.7906496529041"/>
+    <field name="y" value="-90"/>
+    <field name="z" value="-90"/>
+   </parameter>
+   <parameter name="scale">
+    <field name="x" value="8.7"/>
+    <field name="y" value="8.7"/>
+    <field name="z" value="8.7"/>
+   </parameter>
+   <parameter name="kdTrees" value="auto"/>
+   <parameter name="rig" value="auto"/>
+   <parameter name="morph" value="auto"/>
+   <parameter name="gpuInstancing" value="auto"/>
+   <parameter name="gpuInstancesMinCount" value="50"/>
+   <parameter name="model" value="6af160b2-481-72f-944-1ea"/>
+  </reactor>
+  <reactor id="6af157fd-1fe7-c74e-46f1" name="Ceiling Fan" type="node.model" enabled="true">
+   <parameter name="nodeMask">
+    <field name="mask" value="0x0000001F"/>
+    <field name="unchangedBits" value="0x00000000"/>
+   </parameter>
+   <parameter name="children"/>
+   <parameter name="trans">
+    <field name="x" value="16805.097666913"/>
+    <field name="y" value="-11614.5285664"/>
+    <field name="z" value="2750.17440827"/>
+   </parameter>
+   <parameter name="rotate">
+    <field name="x" value="90"/>
+    <field name="y" value="0"/>
+    <field name="z" value="0"/>
+   </parameter>
+   <parameter name="scale">
+    <field name="x" value="2.886055904989"/>
+    <field name="y" value="2.886055904989"/>
+    <field name="z" value="2.886055904989"/>
+   </parameter>
+   <parameter name="kdTrees" value="auto"/>
+   <parameter name="rig" value="auto"/>
+   <parameter name="morph" value="auto"/>
+   <parameter name="gpuInstancing" value="auto"/>
+   <parameter name="gpuInstancesMinCount" value="50"/>
+   <parameter name="model" value="6af160d1-d3b-544-8ba-274"/>
+  </reactor>
+  <reactor id="6af15871-5dc7-359c-91e6" name="Model" type="node.model" enabled="true">
+   <parameter name="nodeMask">
+    <field name="mask" value="0x0000001F"/>
+    <field name="unchangedBits" value="0x00000000"/>
+   </parameter>
+   <parameter name="children"/>
+   <parameter name="trans">
+    <field name="x" value="16644.806491198"/>
+    <field name="y" value="-8100.6376162161"/>
+    <field name="z" value="120.96667326138"/>
+   </parameter>
+   <parameter name="rotate">
+    <field name="x" value="90"/>
+    <field name="y" value="0"/>
+    <field name="z" value="0"/>
+   </parameter>
+   <parameter name="scale">
+    <field name="x" value="19.491585582423"/>
+    <field name="y" value="19.491585582423"/>
+    <field name="z" value="19.491585582423"/>
+   </parameter>
+   <parameter name="kdTrees" value="auto"/>
+   <parameter name="rig" value="auto"/>
+   <parameter name="morph" value="auto"/>
+   <parameter name="gpuInstancing" value="auto"/>
+   <parameter name="gpuInstancesMinCount" value="50"/>
+   <parameter name="model" value="6af160dc-287-295-512-4cf"/>
+  </reactor>
+  <reactor id="6af158f4-e516-f2b4-7a99" name="CameraManipulator" type="camera_manipulator" enabled="true">
+   <parameter name="kind" value="trackball"/>
+   <parameter name="homeEye">
+    <field name="x" value="16202.50424313"/>
+    <field name="y" value="-11045.890929896"/>
+    <field name="z" value="86.828505879663"/>
+   </parameter>
+   <parameter name="homeCenter">
+    <field name="x" value="-20090.569680604"/>
+    <field name="y" value="5011.106084783"/>
+    <field name="z" value="11658.723992041"/>
+   </parameter>
+   <parameter name="homeUp">
+    <field name="x" value="0"/>
+    <field name="y" value="0"/>
+    <field name="z" value="1"/>
+   </parameter>
+   <parameter name="autoComputeHomePosition" value="false"/>
+  </reactor>
+ </reactors>
+ <exportParameters/>
+ <workspace>
+  <preview platform="1"/>
+ </workspace>
+</Project>
